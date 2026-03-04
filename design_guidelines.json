@@ -1,0 +1,168 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "TaskFlow Executive",
+      "archetype": "Swiss Utility",
+      "vibe": "Precision, Clarity, Momentum",
+      "metaphor": "A fresh sheet of architectural paper"
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Archivo, sans-serif",
+        "body": "Manrope, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl font-bold tracking-tight leading-none",
+        "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h3": "text-2xl font-medium tracking-normal",
+        "body_lg": "text-lg leading-relaxed",
+        "body_base": "text-base leading-relaxed text-muted-foreground",
+        "caption": "text-xs uppercase tracking-widest font-bold text-muted-foreground"
+      },
+      "imports": [
+        "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#1A1A1A",
+          "foreground": "#FFFFFF"
+        },
+        "secondary": {
+          "DEFAULT": "#F4F4F5",
+          "foreground": "#18181B"
+        },
+        "accent": {
+          "DEFAULT": "#FF4F00",
+          "foreground": "#FFFFFF",
+          "description": "International Orange - Use sparingly for primary actions and active states"
+        },
+        "background": {
+          "DEFAULT": "#FDFDFD",
+          "dark": "#0A0A0A"
+        },
+        "surface": {
+          "DEFAULT": "#FFFFFF",
+          "dark": "#121212"
+        },
+        "border": {
+          "DEFAULT": "#E4E4E7",
+          "dark": "#27272A"
+        },
+        "muted": {
+          "DEFAULT": "#71717A",
+          "light": "#A1A1AA"
+        }
+      },
+      "gradients": {
+        "subtle_glow": "radial-gradient(circle at 50% 0%, rgba(255, 79, 0, 0.05) 0%, transparent 50%)"
+      }
+    },
+    "layout": {
+      "grid_system": {
+        "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6 p-6 md:p-8",
+        "card_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      },
+      "spacing": {
+        "container_padding": "p-6 md:p-12",
+        "section_gap": "gap-8 md:gap-12",
+        "element_gap": "gap-4"
+      },
+      "radius": {
+        "default": "rounded-none",
+        "button": "rounded-sm",
+        "card": "rounded-sm",
+        "input": "rounded-none"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-sm font-medium transition-all active:scale-95",
+        "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-6 rounded-sm font-medium",
+        "ghost": "hover:bg-accent/10 hover:text-accent text-muted-foreground font-medium"
+      },
+      "cards": {
+        "base": "bg-surface border border-border p-6 rounded-sm shadow-none hover:border-accent/50 transition-colors duration-300",
+        "interactive": "cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transition-all duration-300"
+      },
+      "inputs": {
+        "base": "h-11 rounded-none border-0 border-b border-input bg-transparent px-0 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-accent focus-visible:ring-0 disabled:cursor-not-allowed disabled:opacity-50"
+      }
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "soft": "0 2px 10px rgba(0,0,0,0.03)",
+        "hover": "0 10px 30px rgba(0,0,0,0.06)"
+      },
+      "borders": {
+        "subtle": "1px solid #E4E4E7",
+        "active": "1px solid #FF4F00"
+      },
+      "textures": {
+        "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+      }
+    },
+    "motion": {
+      "transitions": {
+        "default": "all 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slow": "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "animations": {
+        "fade_in": "animate-in fade-in duration-500",
+        "slide_up": "animate-in slide-in-from-bottom-4 duration-500 fade-in"
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "login_background": {
+        "url": "https://images.unsplash.com/photo-1771462883475-1c70a09cdf91?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYWJzdHJhY3QlMjBnZW9tZXRyaWMlMjBhcmNoaXRlY3R1cmUlMjB3aGl0ZSUyMGNvbmNyZXRlfGVufDB8fHx8MTc3MjY1NzkzN3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Minimalist Swiss Architecture",
+        "usage": "Full screen background for login/register pages with 50% white overlay"
+      },
+      "dashboard_hero": {
+        "url": "https://images.unsplash.com/photo-1559051668-934cd674493c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwb2ZmaWNlJTIwZGVzayUyMHdvcmtzcGFjZSUyMGNsZWFuJTIwYWVzdGhldGljfGVufDB8fHx8MTc3MjY1Nzk0NHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Clean Workspace",
+        "usage": "Hero section or empty state background"
+      },
+      "user_avatar_1": {
+        "url": "https://images.unsplash.com/photo-1615104603156-3dc403ca7cc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBkaXZlcnNlJTIwdGVhbSUyMHBvcnRyYWl0cyUyMGhlYWRzaG90cyUyMHN0dWRpbyUyMGxpZ2h0aW5nfGVufDB8fHx8MTc3MjY1NzkzOXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Professional User",
+        "usage": "Default user avatar"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width={1.5} size={20}"
+    }
+  },
+  "instructions_to_main_agent": {
+    "setup": [
+      "Delete standard Create React App CSS in App.css",
+      "Install fonts via Google Fonts import in index.css",
+      "Configure tailwind.config.js with the custom colors and fonts defined above",
+      "Install 'lucide-react' for icons",
+      "Install 'clsx' and 'tailwind-merge' for class utility"
+    ],
+    "layout_rules": [
+      "Use the 'Bento' grid system for the dashboard.",
+      "Sidebar must be fixed width (w-64) and border-r border-border.",
+      "Main content area must have bg-background and min-h-screen.",
+      "Use 'flex flex-col gap-6' for vertical rhythm in forms and lists."
+    ],
+    "component_rules": [
+      "Buttons must be sharp or slightly rounded (rounded-sm). No pill shapes.",
+      "Inputs should look like architectural lines (border-b only).",
+      "Task items in the list should have hover effects: bg-secondary/50.",
+      "Use the 'accent' color (#FF4F00) ONLY for the primary 'Add Task' button and active toggle states."
+    ],
+    "universal_guidelines": [
+      "Do not use gradients for backgrounds. Use solid colors or the noise texture.",
+      "Ensure all text has sufficient contrast. Use text-primary for headings and text-muted-foreground for secondary text.",
+      "Add 'data-testid' to all interactive elements.",
+      "Use 'sonner' for toast notifications."
+    ]
+  }
+}
