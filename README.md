@@ -16,79 +16,50 @@ Persistence — MongoDB for data storage; localStorage for session management
 
 
 Folder Structure
+## 📂 Project Structure
+
+```
 Taskflow_executive/
 │
-├── backend/                     # Express.js API server
+├── backend/
 │   ├── config/
-│   │   └── db.js                # MongoDB connection setup
-│   │
+│   │   └── db.js
 │   ├── controllers/
-│   │   ├── authController.js    # Register / Login logic
-│   │   └── taskController.js    # CRUD handlers for tasks
-│   │
+│   │   ├── authController.js
+│   │   └── taskController.js
 │   ├── middleware/
-│   │   └── authMiddleware.js    # JWT authentication middleware
-│   │
+│   │   └── authMiddleware.js
 │   ├── models/
-│   │   ├── User.js              # Mongoose User schema
-│   │   └── Task.js              # Mongoose Task schema
-│   │
+│   │   ├── User.js
+│   │   └── Task.js
 │   ├── routes/
-│   │   ├── authRoutes.js        # /api/auth endpoints
-│   │   └── taskRoutes.js        # /api/tasks endpoints
-│   │
-│   ├── .env                     # Environment variables (not committed)
-│   ├── package.json
-│   └── server.js                # Express server entry point
-│
-├── frontend/                    # React client application
-│   ├── public/
-│   │   └── index.html
-│   │
-│   ├── src/
-│   │   ├── components/
-│   │   │
-│   │   │   ├── Auth/
-│   │   │   │   ├── Login.jsx
-│   │   │   │   └── Register.jsx
-│   │   │   │
-│   │   │   ├── Dashboard/
-│   │   │   │   ├── Dashboard.jsx     # Stats + Bento grid layout
-│   │   │   │   └── StatsCard.jsx
-│   │   │   │
-│   │   │   ├── Tasks/
-│   │   │   │   ├── TaskList.jsx
-│   │   │   │   ├── TaskCard.jsx
-│   │   │   │   ├── TaskForm.jsx      # Create / edit form
-│   │   │   │   └── TaskFilters.jsx   # Status, priority, search bar
-│   │   │   │
-│   │   │   └── UI/
-│   │   │       ├── Toast.jsx
-│   │   │       └── Navbar.jsx
-│   │   │
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx      # Global authentication state
-│   │   │
-│   │   ├── services/
-│   │   │   └── api.js               # Axios instance + API calls
-│   │   │
-│   │   ├── App.jsx                  # App routes + layout
-│   │   └── index.js
-│   │
+│   │   ├── authRoutes.js
+│   │   └── taskRoutes.js
+│   ├── server.js
 │   └── package.json
 │
-├── tests/                          # Integration and unit tests
-├── test_reports/                   # Test execution reports
-├── memory/                         # Agent memory / session artifacts
+├── frontend/
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── index.js
+│   └── package.json
 │
+├── tests/
+├── test_reports/
+├── memory/
 ├── .emergent/
-│   └── backend_test.py             # Python-based backend smoke tests
+│   └── backend_test.py
 │
-├── design_guidelines.json          # Swiss Utility design token reference
-├── test_result.md                  # Latest automated test summary
-│
+├── design_guidelines.json
+├── test_result.md
 ├── .gitignore
 └── README.md
+```
 
 Tech Stack
 LayerTechnologyFrontendReact, React Router, AxiosBackendNode.js, Express.jsDatabaseMongoDB + MongooseAuthJWT (JSON Web Tokens)StylingCustom CSS — Swiss Utility system (Archivo / Manrope)TestingPython (backend smoke tests)
