@@ -18,59 +18,75 @@ Persistence — MongoDB for data storage; localStorage for session management
 Folder Structure
 Taskflow_executive/
 │
-├── backend/                        # Express.js API server
+├── backend/                     # Express.js API server
 │   ├── config/
-│   │   └── db.js                   # MongoDB connection setup
+│   │   └── db.js                # MongoDB connection setup
+│   │
 │   ├── controllers/
-│   │   ├── authController.js       # Register / login logic
-│   │   └── taskController.js       # CRUD handlers for tasks
+│   │   ├── authController.js    # Register / Login logic
+│   │   └── taskController.js    # CRUD handlers for tasks
+│   │
 │   ├── middleware/
-│   │   └── authMiddleware.js       # JWT verification middleware
+│   │   └── authMiddleware.js    # JWT authentication middleware
+│   │
 │   ├── models/
-│   │   ├── User.js                 # Mongoose User schema
-│   │   └── Task.js                 # Mongoose Task schema
+│   │   ├── User.js              # Mongoose User schema
+│   │   └── Task.js              # Mongoose Task schema
+│   │
 │   ├── routes/
-│   │   ├── authRoutes.js           # /api/auth endpoints
-│   │   └── taskRoutes.js           # /api/tasks endpoints
-│   ├── .env                        # Environment variables (not committed)
+│   │   ├── authRoutes.js        # /api/auth endpoints
+│   │   └── taskRoutes.js        # /api/tasks endpoints
+│   │
+│   ├── .env                     # Environment variables (not committed)
 │   ├── package.json
-│   └── server.js                   # Entry point — Express app + middleware
+│   └── server.js                # Express server entry point
 │
-├── frontend/                       # React client application
+├── frontend/                    # React client application
 │   ├── public/
 │   │   └── index.html
+│   │
 │   ├── src/
 │   │   ├── components/
+│   │   │
 │   │   │   ├── Auth/
 │   │   │   │   ├── Login.jsx
 │   │   │   │   └── Register.jsx
+│   │   │   │
 │   │   │   ├── Dashboard/
-│   │   │   │   ├── Dashboard.jsx   # Stats + Bento grid layout
+│   │   │   │   ├── Dashboard.jsx     # Stats + Bento grid layout
 │   │   │   │   └── StatsCard.jsx
+│   │   │   │
 │   │   │   ├── Tasks/
 │   │   │   │   ├── TaskList.jsx
 │   │   │   │   ├── TaskCard.jsx
-│   │   │   │   ├── TaskForm.jsx    # Create / edit form
-│   │   │   │   └── TaskFilters.jsx # Status, priority, search bar
+│   │   │   │   ├── TaskForm.jsx      # Create / edit form
+│   │   │   │   └── TaskFilters.jsx   # Status, priority, search bar
+│   │   │   │
 │   │   │   └── UI/
 │   │   │       ├── Toast.jsx
 │   │   │       └── Navbar.jsx
+│   │   │
 │   │   ├── context/
-│   │   │   └── AuthContext.jsx     # Global auth state via React Context
+│   │   │   └── AuthContext.jsx      # Global authentication state
+│   │   │
 │   │   ├── services/
-│   │   │   └── api.js              # Axios instance + API calls
-│   │   ├── App.jsx                 # Routes + layout
+│   │   │   └── api.js               # Axios instance + API calls
+│   │   │
+│   │   ├── App.jsx                  # App routes + layout
 │   │   └── index.js
+│   │
 │   └── package.json
 │
 ├── tests/                          # Integration and unit tests
-├── test_reports/                   # Output from test runs
+├── test_reports/                   # Test execution reports
 ├── memory/                         # Agent memory / session artifacts
-├── .emergent/                      # Build tool configuration
 │
-├── backend_test.py                 # Python-based backend smoke tests
+├── .emergent/
+│   └── backend_test.py             # Python-based backend smoke tests
+│
 ├── design_guidelines.json          # Swiss Utility design token reference
-├── test_result.md                  # Latest test run summary
+├── test_result.md                  # Latest automated test summary
+│
 ├── .gitignore
 └── README.md
 
